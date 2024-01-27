@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { cn } from '@/utils/utils';
-// import { useStyles } from '@/utils/inputClasses';
 import { Controller, useForm } from 'react-hook-form'
 import { TextField } from '@mui/material';
 import { emailValidation, nameValidation, phoneValidation } from '@/utils/validation';
@@ -47,7 +46,6 @@ const sx = {
 }
 
 export const Form = () => {
-    // const classes = useStyles();
     const { handleSubmit, control, formState: { errors }, reset } = useForm({ defaultValues })
 
     const [loading, setLoading] = useState(false);
