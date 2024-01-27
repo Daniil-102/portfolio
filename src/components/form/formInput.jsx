@@ -3,7 +3,7 @@
 import React, { forwardRef } from 'react'
 import { Label } from '../ui/label'
 import { Input } from '../ui/input'
-import { cn } from '@/utils/utils'
+import { cn } from '../../utils/utils'
 
 
 
