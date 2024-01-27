@@ -52,7 +52,7 @@ export const Form = () => {
     const onSubmit = async (data) => {
         try {
             setLoading(true);
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/send-email`, data, {
+            const response = await axios.post(`https://my-portfolio-2024-bb4f97f57bae.herokuapp.com/send-email`, data, {
                 headers: {
                     'Content-Type': 'application/json',
                 }
