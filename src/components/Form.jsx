@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { cn } from '@/utils/utils';
 import { Controller, useForm } from 'react-hook-form'
 import { TextField } from '@mui/material';
-import { emailValidation, nameValidation, phoneValidation } from '@/utils/validation';
+import { emailValidation, nameValidation, phoneValidation } from '../utils/validation';
 import { toast } from 'sonner'
 import axios from 'axios';
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 const animation = {

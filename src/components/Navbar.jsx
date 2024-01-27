@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from '../ui/NavLink'
 import { Buttonn } from '../ui/Button'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { Sheet, SheetContent } from './ui/sheet'
 import { Menu } from 'lucide-react'
 import { Button } from './ui/button'
 import { Link } from 'react-scroll'

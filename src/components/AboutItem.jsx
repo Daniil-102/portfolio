@@ -1,6 +1,6 @@
-import { cn } from '@/utils/utils'
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { cn } from '../utils/utils'
 
 
 const leftAnimation = {
