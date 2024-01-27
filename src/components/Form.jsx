@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { cn } from '@/utils/utils';
-import { useStyles } from '@/utils/inputClasses';
+// import { useStyles } from '@/utils/inputClasses';
 import { Controller, useForm } from 'react-hook-form'
 import { TextField } from '@mui/material';
 import { emailValidation, nameValidation, phoneValidation } from '@/utils/validation';
@@ -25,8 +25,29 @@ const defaultValues = {
     phone: '',
 }
 
+const sx = {
+    '& .MuiInputBase-input': {
+        color: 'white',
+    },
+    '& label': {
+        color: 'gray',
+    },
+    '& .MuiInput-underline:before': {
+        borderBottomColor: 'gray',
+    },
+    '& .MuiInput-underline:hover:not(.Mui-disabled):before': {
+        borderBottomColor: 'gray',
+    },
+    '& label.Mui-focused': {
+        color: 'white',
+    },
+    '& .MuiInput-underline:after': {
+        borderBottomColor: 'white',
+    },
+}
+
 export const Form = () => {
-    const classes = useStyles();
+    // const classes = useStyles();
     const { handleSubmit, control, formState: { errors }, reset } = useForm({ defaultValues })
 
     const [loading, setLoading] = useState(false);
@@ -75,7 +96,8 @@ export const Form = () => {
                             <motion.div transition={{ duration: .8 }} variants={animation} className="absolute z-10 inset-0 bg-white" />
                             <TextField
                                 variant='standard'
-                                className={cn(classes.root, 'w-full ')}
+                                className='w-full '
+                                sx={sx}
                                 label='Name*'
                                 onChange={e => field.onChange(e)}
                                 value={field.value}
@@ -94,7 +116,8 @@ export const Form = () => {
                             <motion.div transition={{ duration: .6 }} variants={animation} className="absolute z-10 inset-0 bg-white" />
                             <TextField
                                 variant='standard'
-                                className={cn(classes.root, 'w-full ')}
+                                className='w-full '
+                                sx={sx}
                                 label='Email*'
                                 onChange={e => field.onChange(e)}
                                 value={field.value}
@@ -115,7 +138,8 @@ export const Form = () => {
                             <TextField
                                 margin='none'
                                 variant='standard'
-                                className={cn(classes.root, 'w-full')}
+                                className='w-full '
+                                sx={sx}
                                 label='Phone number'
                                 onChange={e => field.onChange(e)}
                                 value={field.value}
