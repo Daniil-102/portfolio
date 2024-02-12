@@ -10,7 +10,7 @@ const projects = [
         link: 'https://taskify-puce-five.vercel.app/'
     },
     {
-        img: 'project1.jpg',
+        img: 'project4.png',
         title: 'Real Time Chat Application',
         desc: 'The Real Time Chat App is a modern, real-time messaging web application. With this app, users can communicate, send text messages, and see the online status of their contacts.',
         hash: ['Daisy UI', 'tailwind', 'MERN', 'Socket.io', 'Zustand'],
